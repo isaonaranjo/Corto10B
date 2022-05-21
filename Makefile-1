@@ -1,0 +1,7 @@
+lall:	histogram
+
+histogram:	histogram.cu pgm.o
+	nvcc  histogram.cu pgm.o -o histogram
+
+pgm.o:	pgm.cpp
+	g++ -c pgm.cpp -o ./pgm.o
